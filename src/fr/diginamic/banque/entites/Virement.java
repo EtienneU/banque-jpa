@@ -3,7 +3,6 @@
  */
 package fr.diginamic.banque.entites;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,18 +18,18 @@ public class Virement extends Operation {
 	
 	@ManyToOne
 	@JoinColumn(name="ID_CLIENT")
-	private Client client;
+	private Client beneficiaire;
 
 	public Virement() {
 		
 	}
 
-	public Client getClient() {
-		return client;
+	public Client getBeneficiaire() {
+		return beneficiaire;
 	}
 
-	public void setClient(Client client) {
-		this.client = client;
+	public void setBeneficiaire(Client client) {
+		this.beneficiaire = client;
 	}
 
 }

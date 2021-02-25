@@ -3,10 +3,8 @@
  */
 package fr.diginamic.banque;
 
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.HashSet;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -132,14 +130,14 @@ public class TestJpaBanque {
 		client1.getComptes().add(compte3);
 		
 		Virement virement1 = new Virement();
-		virement1.setClient(client2);
+		virement1.setBeneficiaire(client2);
 		virement1.setDate(new Date(121, 3, 22));
 		virement1.setMontant(321d);
 		virement1.setMotif("Cadeau d'anniversaire");
 		em.persist(virement1);
 		
 		Virement virement2 = new Virement();
-		virement2.setClient(client1);
+		virement2.setBeneficiaire(client1);
 		virement2.setDate(new Date(121, 2, 2));
 		virement2.setMontant(45d);
 		virement2.setMotif("Avance sur les courses");
